@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-@EnableWebMvc
+//@EnableWebMvc
 @EnableConfigurationProperties
 @SpringBootApplication
 public class Application {
@@ -17,7 +17,7 @@ public class Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
-	
+/*
 	@Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurerAdapter() {
@@ -25,8 +25,10 @@ public class Application {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("api/v1/authenticate").allowedOrigins("*");
                 registry.addMapping("api/v1/authenticate").allowedMethods("RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS");
+                registry.addMapping("/").allowedOrigins("*").allowedMethods("RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS");
             }
         };
     }
+    */
 		
 }
